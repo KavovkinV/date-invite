@@ -10,12 +10,12 @@
   <main class="app">
     <section class="card intro-card" id="introScreen">
       <div class="heart">♡</div>
-      <p class="small-text">В прошлый раз все получилось спонтанно, теперь хочу что все было оффициально</p>
+      <p class="small-text">У меня к тебе один очень важный вопрос</p>
       <h1>Пойдём со мной на свидание?</h1>
 
       <div class="buttons" id="buttonArea">
-        <button class="btn btn-yes" id="yesButton">Да</button>
-        <button class="btn btn-no" id="noButton">Нет</button>
+        <button class="btn btn-yes" id="yesButton" type="button">Да 💗</button>
+        <button class="btn btn-no" id="noButton" type="button">Нет</button>
       </div>
     </section>
 
@@ -28,20 +28,21 @@
         <div class="fields">
           <label>
             <span>Дата</span>
-            <input type="date" id="date" required>
+            <input type="date" id="date" name="date" required>
           </label>
 
           <label>
             <span>Время</span>
-            <input type="time" id="time" required>
+            <input type="time" id="time" name="time" required>
           </label>
 
           <label class="full-width">
-            <span>Куда ты хотела бы пойти?</span>
+            <span>Место</span>
             <input
               type="text"
               id="place"
-              placeholder=" Азиатское кафе, парк, караоке..."
+              name="place"
+              placeholder="Например: уютное кафе, парк..."
               maxlength="80"
               required
             >
@@ -51,6 +52,7 @@
             <span>Что-нибудь ещё?</span>
             <textarea
               id="note"
+              name="note"
               placeholder="Напиши свои пожелания или оставь мне подсказку..."
               maxlength="300"
               rows="4"
@@ -58,7 +60,9 @@
           </label>
         </div>
 
-        <button class="btn confirm-btn" type="submit">Сохранить</button>
+        <button class="btn confirm-btn" id="submitButton" type="submit">
+          Сохранить наше свидание ✨
+        </button>
       </form>
     </section>
 
@@ -86,7 +90,9 @@
         </div>
       </div>
 
-      <button class="btn restart-btn" id="restartButton">Изменить выбор</button>
+      <button class="btn restart-btn" id="restartButton" type="button">
+        Изменить выбор
+      </button>
     </section>
   </main>
 
