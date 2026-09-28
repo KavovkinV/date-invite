@@ -1,3 +1,4 @@
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mrpbodwv";
 const introScreen = document.getElementById("introScreen");
 const planScreen = document.getElementById("planScreen");
 const resultScreen = document.getElementById("resultScreen");
@@ -64,7 +65,13 @@ yesButton.addEventListener("click", () => {
 
   dateInput.focus();
 });
+// Отправка нашего собственного HTML-поля в Formspree.
+dateForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
 
+  if (!dateForm.reportValidity()) {
+    return;
+  }
 dateForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
