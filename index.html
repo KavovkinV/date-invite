@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Есть один вопрос 💗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="card intro-card" id="introScreen">
+      <div class="heart">♡</div>
+      <p class="small-text">В прошлый раз все получилось спонтанно, теперь хочу что все было оффициально</p>
+      <h1>Пойдём со мной на свидание?</h1>
+
+      <div class="buttons" id="buttonArea">
+        <button class="btn btn-yes" id="yesButton">Да</button>
+        <button class="btn btn-no" id="noButton">Нет</button>
+      </div>
+    </section>
+
+    <section class="card plan-card hidden" id="planScreen">
+      <div class="heart">♥</div>
+      <p class="small-text">Тогда давай выберем наш маленький план</p>
+      <h1>Когда и куда пойдём?</h1>
+
+      <form id="dateForm">
+        <div class="fields">
+          <label>
+            <span>Дата</span>
+            <input type="date" id="date" required>
+          </label>
+
+          <label>
+            <span>Время</span>
+            <input type="time" id="time" required>
+          </label>
+
+          <label class="full-width">
+            <span>Куда ты хотела бы пойти?</span>
+            <input
+              type="text"
+              id="place"
+              placeholder=" Азиатское кафе, парк, караоке..."
+              maxlength="80"
+              required
+            >
+          </label>
+
+          <label class="full-width">
+            <span>Что-нибудь ещё?</span>
+            <textarea
+              id="note"
+              placeholder="Напиши свои пожелания или оставь мне подсказку..."
+              maxlength="300"
+              rows="4"
+            ></textarea>
+          </label>
+        </div>
+
+        <button class="btn confirm-btn" type="submit">Сохранить</button>
+      </form>
+    </section>
+
+    <section class="card result-card hidden" id="resultScreen">
+      <div class="heart big-heart">♥</div>
+      <p class="small-text">План готов</p>
+      <h1>До встречи ✨</h1>
+
+      <div class="summary">
+        <div class="summary-row">
+          <span>Дата</span>
+          <strong id="resultDate">—</strong>
+        </div>
+        <div class="summary-row">
+          <span>Время</span>
+          <strong id="resultTime">—</strong>
+        </div>
+        <div class="summary-row">
+          <span>Место</span>
+          <strong id="resultPlace">—</strong>
+        </div>
+        <div class="summary-row note-row" id="resultNoteRow">
+          <span>Заметка</span>
+          <strong id="resultNote">—</strong>
+        </div>
+      </div>
+
+      <button class="btn restart-btn" id="restartButton">Изменить выбор</button>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
