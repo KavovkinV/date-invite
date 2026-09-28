@@ -24,22 +24,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text);
   background:
-    radial-gradient(
-      circle at 15% 20%,
-      rgba(255, 255, 255, 0.65) 0 8%,
-      transparent 9%
-    ),
-    radial-gradient(
-      circle at 85% 75%,
-      rgba(255, 255, 255, 0.45) 0 10%,
-      transparent 11%
-    ),
-    linear-gradient(
-      135deg,
-      #f6bfd1,
-      #ffdce8 48%,
-      #f7c5d7
-    );
+    radial-gradient(circle at 15% 20%, rgba(255,255,255,.65) 0 8%, transparent 9%),
+    radial-gradient(circle at 85% 75%, rgba(255,255,255,.45) 0 10%, transparent 11%),
+    linear-gradient(135deg, #f6bfd1, #ffdce8 48%, #f7c5d7);
 }
 
 body::before,
@@ -49,7 +36,7 @@ body::after {
   width: 240px;
   height: 240px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(255,255,255,.14);
   filter: blur(2px);
   pointer-events: none;
 }
@@ -73,7 +60,7 @@ body::after {
 .card {
   width: 100%;
   padding: 52px 42px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255,255,255,.7);
   border-radius: 30px;
   background: var(--white);
   box-shadow: var(--shadow);
@@ -121,10 +108,7 @@ h1 {
   font-weight: 700;
   font-family: inherit;
   cursor: pointer;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background 0.2s ease;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
 }
 
 .btn:hover {
@@ -133,26 +117,20 @@ h1 {
 
 .btn:disabled {
   cursor: wait;
-  opacity: 0.7;
+  opacity: .7;
   transform: none;
 }
 
 .btn-yes,
 .confirm-btn {
   color: white;
-  background: linear-gradient(
-    135deg,
-    #d95f86,
-    #c94873
-  );
-  box-shadow:
-    0 10px 24px rgba(201, 72, 115, 0.25);
+  background: linear-gradient(135deg, #d95f86, #c94873);
+  box-shadow: 0 10px 24px rgba(201, 72, 115, .25);
 }
 
 .btn-yes:hover,
 .confirm-btn:hover {
-  box-shadow:
-    0 13px 28px rgba(201, 72, 115, 0.32);
+  box-shadow: 0 13px 28px rgba(201, 72, 115, .32);
 }
 
 .btn-no,
@@ -164,10 +142,7 @@ h1 {
 .btn-no.is-floating {
   position: fixed;
   z-index: 20;
-  transition:
-    left 0.18s ease,
-    top 0.18s ease,
-    transform 0.18s ease;
+  transition: left .18s ease, top .18s ease, transform .18s ease;
 }
 
 .hidden {
@@ -204,16 +179,13 @@ textarea {
   color: var(--text);
   font: inherit;
   outline: none;
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: border-color .2s ease, box-shadow .2s ease;
 }
 
 input:focus,
 textarea:focus {
   border-color: var(--pink-dark);
-  box-shadow:
-    0 0 0 4px rgba(217, 95, 134, 0.12);
+  box-shadow: 0 0 0 4px rgba(217,95,134,.12);
 }
 
 textarea {
@@ -278,10 +250,8 @@ textarea {
   border-radius: 999px;
   color: white;
   background: #5b3947;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  transition:
-    opacity 0.25s ease,
-    transform 0.25s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+  transition: opacity .25s ease, transform .25s ease;
   max-width: calc(100vw - 32px);
   text-align: center;
 }
@@ -292,14 +262,8 @@ textarea {
 }
 
 @keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-5px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
 
 @media (max-width: 620px) {
