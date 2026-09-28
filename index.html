@@ -8,17 +8,20 @@
 </head>
 <body>
   <main class="app">
+
+    <!-- Первый экран -->
     <section class="card intro-card" id="introScreen">
       <div class="heart">♡</div>
       <p class="small-text">У меня к тебе один очень важный вопрос</p>
       <h1>Пойдём со мной на свидание?</h1>
 
-      <div class="buttons" id="buttonArea">
+      <div class="buttons">
         <button class="btn btn-yes" id="yesButton" type="button">Да 💗</button>
         <button class="btn btn-no" id="noButton" type="button">Нет</button>
       </div>
     </section>
 
+    <!-- Экран выбора -->
     <section class="card plan-card hidden" id="planScreen">
       <div class="heart">♥</div>
       <p class="small-text">Тогда давай выберем наш маленький план</p>
@@ -26,14 +29,25 @@
 
       <form id="dateForm">
         <div class="fields">
+
           <label>
             <span>Дата</span>
-            <input type="date" id="date" name="date" required>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              required
+            >
           </label>
 
           <label>
             <span>Время</span>
-            <input type="time" id="time" name="time" required>
+            <input
+              type="time"
+              id="time"
+              name="time"
+              required
+            >
           </label>
 
           <label class="full-width">
@@ -58,45 +72,66 @@
               rows="4"
             ></textarea>
           </label>
+
         </div>
 
-        <button class="btn confirm-btn" id="submitButton" type="submit">
+        <button
+          class="btn confirm-btn"
+          id="submitButton"
+          type="submit"
+        >
           Сохранить наше свидание ✨
         </button>
       </form>
     </section>
 
+    <!-- Финальный экран -->
     <section class="card result-card hidden" id="resultScreen">
       <div class="heart big-heart">♥</div>
       <p class="small-text">План готов</p>
       <h1>До встречи ✨</h1>
 
       <div class="summary">
+
         <div class="summary-row">
           <span>Дата</span>
           <strong id="resultDate">—</strong>
         </div>
+
         <div class="summary-row">
           <span>Время</span>
           <strong id="resultTime">—</strong>
         </div>
+
         <div class="summary-row">
           <span>Место</span>
           <strong id="resultPlace">—</strong>
         </div>
+
         <div class="summary-row note-row" id="resultNoteRow">
           <span>Заметка</span>
           <strong id="resultNote">—</strong>
         </div>
+
       </div>
 
-      <button class="btn restart-btn" id="restartButton" type="button">
+      <button
+        class="btn restart-btn"
+        id="restartButton"
+        type="button"
+      >
         Изменить выбор
       </button>
     </section>
+
   </main>
 
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite"
+  ></div>
 
   <script src="script.js"></script>
 </body>
