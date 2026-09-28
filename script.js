@@ -23,7 +23,7 @@ const toast = document.getElementById("toast");
 
 // Formspree endpoint
 const FORMSPREE_ENDPOINT =
-  "https://formspree.io/f/mrpbodwv";
+  "https://formspree.io/f/mrpbowdv";
 
 // Сегодняшняя дата в локальном времени.
 // Прошлые даты выбирать нельзя.
